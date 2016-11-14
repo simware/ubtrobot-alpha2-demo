@@ -7,7 +7,7 @@ This app say a text (Welcome to Uppstart, hope you have fun!) and then play a pr
 
 ### A few notes:
 
-* Download (http://dev.ubtrobot.com/opencenter/index) the API and copy the ubtechalpha2robot.jar file into /alpha2demo/libs directory. Did not include it since you would need to agree to the license.
+* Download the API (http://dev.ubtrobot.com/opencenter/index) and copy the ubtechalpha2robot.jar file into alpha2demo/libs directory. Did not include it since you would need to agree to the license.
 * Trying to develop using the two phones did not work for me. Could never install the emulator APK, wrong signature on the APK file.
 * When deploying the app, aka pressing play in Android studio, please note that I always needed to disconnect the app and then re-connect to the Alpha2 before the changes took effect.
 * The code has been cleaned up a bit from the demo version included in the SDK from ubtrobot.
