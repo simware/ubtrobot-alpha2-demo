@@ -38,3 +38,11 @@ captures/
 
 # Keystore files
 *.jks
+
+# Alpha2 files
+ubtechalpha2robot.jar
+/docs/*
+
+# Mac files
+.DS_Store
+.idea

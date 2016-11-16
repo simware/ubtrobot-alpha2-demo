@@ -1,0 +1,11 @@
+{
+    "details": "Uppstart",
+    "models": [
+        {
+            "index": "0", 
+            "text": "Start/Stop"
+        }
+    ], 
+    "title": "Do the Uppstart!",
+    "version": "1.0.0.0"
+}
