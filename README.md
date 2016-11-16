@@ -17,4 +17,5 @@ This app say a text (Welcome to Uppstart, hope you have fun!) and then play a pr
 1. Change to let the user enter the text it should say.
 2. Have a selection list of pre-installed moves it can do.
 3. Add a new App ID and publish the app on the Alpha 2 store.
+	Did not work, got "Not found" error message from attempting to access the "http://dev.ubtrobot.com/opencenter/app/complete" page.
 4. Add explanations to the code to show how the different callbacks/interfaces works.
