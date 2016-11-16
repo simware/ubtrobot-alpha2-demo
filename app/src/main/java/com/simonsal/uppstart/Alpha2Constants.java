@@ -14,6 +14,8 @@ public class Alpha2Constants {
 
     public static final String DANCE_MOVE = "electric zone";
 
+    public static final String TEXT_STRING = "Welcome to UPPSTART! Hope you have fun!";
+
     public enum ButtonIndex{
         START_STOP("0");
 

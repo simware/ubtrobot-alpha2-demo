@@ -28,10 +28,12 @@ public class MainActivity extends Activity implements
         AlphaActionClientListener,
         Alpha2SpeechMainServiceUtil.ISpeechInitInterface {
 
-    private static final String TAG = "--MainActivity--";
+    private static final String TAG = "==MainActivity==";
 
     private Alpha2RobotApi mRobot;
     private static long mButtonPressedTimeStamp = 0L;
+    private static long mSoundFinishedPlayingTimeStamp = 0L;
+    protected static long mMoveFinishedTimeStamp = 0L;
     private UppstartDemoHandler mUppstartDemoHandler;
 
     @Override
@@ -74,7 +76,10 @@ public class MainActivity extends Activity implements
     @Override
     public void onServerPlayEnd(boolean var1) {
         Log.i(TAG, "onServerPlayEnd(" + var1 + ")");
-        this.mUppstartDemoHandler.actionHasEnded(null, var1);
+        if( (System.currentTimeMillis()-mSoundFinishedPlayingTimeStamp) > Alpha2Constants.BUTTON_PRESSED_TIME_HACK ) {
+            mSoundFinishedPlayingTimeStamp = System.currentTimeMillis();
+            this.mUppstartDemoHandler.actionHasEnded(null, var1);
+        }
     }
 
 
@@ -82,8 +87,10 @@ public class MainActivity extends Activity implements
 
     @Override
     public void onActionStop(String var1) {
-        Log.i(TAG, "onActionStop(" + var1 + ")");
-        this.mUppstartDemoHandler.actionHasEnded(var1, false);
+        Log.i(TAG, "onActionStop(" + var1 + ") ");
+        if( (System.currentTimeMillis()-mMoveFinishedTimeStamp) > Alpha2Constants.BUTTON_PRESSED_TIME_HACK ) {
+            this.mUppstartDemoHandler.actionHasEnded(var1, null);
+        }
     }
 
     // ------------------- Alpha2SpeechMainServiceUtil.ISpeechInitInterface
